@@ -512,6 +512,7 @@ section {
   transition: all ease-in-out 0.3s;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 .portfolio .portfolio-wrap .portfolio-links a {
   color: #fff;
