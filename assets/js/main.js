@@ -4,6 +4,29 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+function kirimPesan(){
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var subject = document.getElementById('subject');
+    var message=document.getElementById("message");
+    
+    var gabungan = 'NEW%20ANSWER%0A%0ANama%3A%0A' + name.value + '%0AEmail%3A%0A' + email.value + '%0ASubject%3A%0A' + subject.value + '%0APesan%3A%0A' + message.value;
+
+    var token = '5570004293:AAF6Lh3z_p3pEBpktoOlnwLsnhXJ74anp8Y';
+    var grup = '-795100834';
+
+    $.ajax({
+        url:`https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
+        method:`POST`,
+    })
+
+}
+function showAlert() {
+    var myText = "Congratulations! Your appointment has been successfully booked. We will contact you as soon as possible. Have a nice day";
+    alert (myText);
+  }
+
 (function() {
   "use strict";
 
