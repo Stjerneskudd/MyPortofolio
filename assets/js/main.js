@@ -13,8 +13,8 @@ function kirimPesan(){
     
     var gabungan = 'NEW%20ANSWER%0A%0ANama%3A%0A' + name.value + '%0AEmail%3A%0A' + email.value + '%0ASubject%3A%0A' + subject.value + '%0APesan%3A%0A' + message.value;
 
-    var token = '5570004293:AAF6Lh3z_p3pEBpktoOlnwLsnhXJ74anp8Y';
-    var grup = '-795100834';
+    var token = '';
+    var grup = '';
 
     $.ajax({
         url:`https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
